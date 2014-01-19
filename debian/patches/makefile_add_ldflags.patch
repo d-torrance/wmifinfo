@@ -1,0 +1,13 @@
+Author: Emanuele Rocca <ema@debian.org>
+Description: Use LDFLAGS in Makefile
+--- a/Makefile
++++ b/Makefile
+@@ -33,7 +33,7 @@
+ 	$(CC) $(COPTS) $(CFLAGS) -c $< 
+ 
+ $(BIN):	$(FILES)
+-	$(LD) -o $@ $(FILES) $(LDOPTS)
++	$(LD) -o $@ $(FILES) $(LDOPTS) $(LDFLAGS)
+ 
+ clean:
+ 	rm -f *.o $(BIN) core ./.#* *.orig *.rej

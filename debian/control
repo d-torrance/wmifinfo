@@ -1,0 +1,16 @@
+Source: wmifinfo
+Section: x11
+Priority: optional
+Maintainer: Debian QA Group <packages@qa.debian.org>
+Build-Depends: debhelper (>= 9), libx11-dev, libxext-dev, libxpm-dev, quilt 
+Standards-Version: 3.9.5
+Homepage: http://zevv.nl/play/code/wmifinfo/
+
+Package: wmifinfo
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: Dockapp that shows information for all interfaces
+ wmifinfo is a simple applet showing basic network info for all available
+ interfaces. It shows IP address, netmask, gateway and MAC address in a
+ similar way to ifconfig.
+

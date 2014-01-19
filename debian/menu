@@ -1,0 +1,3 @@
+?package(wmifinfo):needs="X11" section="Applications/Network/Monitoring"\
+  title="wmifinfo" command="/usr/bin/wmifinfo"
+

@@ -1,0 +1,4 @@
+This package uses quilt to manage patches against the upstream source.
+
+If you are not familiar with using quilt with Debian packages please take a
+look at /usr/share/doc/quilt
