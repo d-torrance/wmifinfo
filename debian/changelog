@@ -2,10 +2,12 @@ wmifinfo (0.09-7) unstable; urgency=low
 
   * New maintainer (Closes: #621911).
     - Update Maintainer in debian/control.
+  * debian/copyright
+    - Convert to machine-readable format v1.0.
   * debian/source/format
     - New file; set to quilt (3.0).
 
- --
+ -- Doug Torrance <dtorrance@monmouthcollege.edu>  Mon, 28 Jul 2014 01:22:22 -0500
 
 wmifinfo (0.09-6) unstable; urgency=low
 
