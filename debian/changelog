@@ -4,6 +4,8 @@ wmifinfo (0.09-7) unstable; urgency=low
     - Update Maintainer in debian/control.
   * debian/copyright
     - Convert to machine-readable format v1.0.
+  * debian/rules
+    - Simplify to use dh(1).
   * debian/source/format
     - New file; set to quilt (3.0).
 
