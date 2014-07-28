@@ -2,6 +2,8 @@ wmifinfo (0.09-7) unstable; urgency=low
 
   * New maintainer (Closes: #621911).
     - Update Maintainer in debian/control.
+  * debian/source/format
+    - New file; set to quilt (3.0).
 
  --
 
