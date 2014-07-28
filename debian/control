@@ -1,8 +1,8 @@
 Source: wmifinfo
 Section: x11
 Priority: optional
-Maintainer: Debian QA Group <packages@qa.debian.org>
-Build-Depends: debhelper (>= 9), libx11-dev, libxext-dev, libxpm-dev, quilt 
+Maintainer: Doug Torrance <dtorrance@monmouthcollege.edu>
+Build-Depends: debhelper (>= 9), libx11-dev, libxext-dev, libxpm-dev, quilt
 Standards-Version: 3.9.5
 Homepage: http://zevv.nl/play/code/wmifinfo/
 
