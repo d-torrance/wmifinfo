@@ -5,6 +5,8 @@ Maintainer: Doug Torrance <dtorrance@monmouthcollege.edu>
 Build-Depends: debhelper (>= 9), libx11-dev, libxext-dev, libxpm-dev, quilt
 Standards-Version: 3.9.5
 Homepage: http://zevv.nl/play/code/wmifinfo/
+Vcs-Browser: https://github.com/d-torrance/wmifinfo
+Vcs-Git: https://github.com/d-torrance/wmifinfo.git
 
 Package: wmifinfo
 Architecture: any

@@ -2,6 +2,8 @@ wmifinfo (0.09-7) unstable; urgency=low
 
   * New maintainer (Closes: #621911).
     - Update Maintainer in debian/control.
+  * debian/control
+    - Add Vcs-*.
   * debian/copyright
     - Convert to machine-readable format v1.0.
   * debian/manpages
