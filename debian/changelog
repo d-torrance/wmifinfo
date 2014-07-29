@@ -10,6 +10,7 @@ wmifinfo (0.09-7) unstable; urgency=low
     - New file.
   * debian/rules
     - Simplify to use dh(1).
+    - Pass CPPFLAGS to CC via CFLAGS.
   * debian/source/format
     - New file; set to quilt (3.0).
 
