@@ -37,10 +37,10 @@ wmifinfo (0.09-6) unstable; urgency=low
 wmifinfo (0.09-5) unstable; urgency=low
 
   * Add quilt include to debian/rules
-    - Add patches/wmifinfo-timeval_fix.patch (Closes: #503416)
-      This add set a valid timeval to wmifinfo.c
-    - Add patches/makefile_patch.patch.
-      Split patches made it directly to upstream source
+    - Add patches/wmifinfo-timeval_fix.patch to fix improper
+      use of timeval struct in wmifinfo.c (Closes: #503416).
+    - Add patches/makefile_patch.patch to use $DESTDIR and
+      $INSTALL in Makefile instead of using fixed paths.
   * Remove unneeded x-dev from the Build-Depends.
   * Remove unneeded CFLAGS from the debian/rules.
   * Set Standards-Version to 3.8.0.
@@ -111,7 +111,8 @@ wmifinfo (0.06-1) unstable; urgency=low
 
 wmifinfo (0.05-2) unstable; urgency=low
 
-  * Uppercase description (Closes: Bug#150377).
+  * debian/control
+    - Fix capitalization in description (Closes: #150377).
 
  -- Søren Boll Overgaard <boll@debian.org>  Wed, 19 Jun 2002 00:16:09 +0200
 
@@ -121,4 +122,3 @@ wmifinfo (0.05-1) unstable; urgency=low
   * Changed Makefile to install in $(DESTDIR).
 
  -- Søren Boll Overgaard <boll@debian.org>  Fri,  7 Jun 2002 16:23:13 +0200
-  
