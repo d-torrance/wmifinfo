@@ -3,9 +3,12 @@ wmifinfo (0.09-7) unstable; urgency=low
   * New maintainer (Closes: #621911).
     - Update Maintainer in debian/control.
   * debian/control
+    - Remove quilt from Build-Depends.
     - Add Vcs-*.
   * debian/copyright
     - Convert to machine-readable format v1.0.
+  * debian/docs
+    - New file.
   * debian/manpages
     - New file.
   * debian/rules
@@ -14,7 +17,7 @@ wmifinfo (0.09-7) unstable; urgency=low
   * debian/source/format
     - New file; set to quilt (3.0).
 
- -- Doug Torrance <dtorrance@monmouthcollege.edu>  Mon, 28 Jul 2014 01:22:22 -0500
+ -- Doug Torrance <dtorrance@monmouthcollege.edu>  Mon, 28 Jul 2014 21:23:16 -0500
 
 wmifinfo (0.09-6) unstable; urgency=low
 
@@ -36,86 +39,86 @@ wmifinfo (0.09-5) unstable; urgency=low
   * Add quilt include to debian/rules
     - Add patches/wmifinfo-timeval_fix.patch (Closes: #503416)
       This add set a valid timeval to wmifinfo.c
-    - Add patches/makefile_patch.patch
+    - Add patches/makefile_patch.patch.
       Split patches made it directly to upstream source
   * Remove unneeded x-dev from the Build-Depends.
   * Remove unneeded CFLAGS from the debian/rules.
-  * Set standard version to 3.8.0
-    - Add README.source
+  * Set Standards-Version to 3.8.0.
+    - Add README.source.
 
  -- Enrique Monge <emonge@debian.org.sv>  Tue, 28 Oct 2008 09:38:42 -0600
 
 wmifinfo (0.09-4) unstable; urgency=low
 
-  * Bumped to 3.7.3 standard version (no changes needed)
-    debian/compat updated
-    changed Depends from debhelper 5 to debhelper >=6
-    minor changes to debian/rules
-  * debian/watch fixed (Closes: #453568)
-  * Homepage field added to debian/control
-  * New debian/copyright format added
-  * Using new menu format
+  * Bump to Standards-Version 3.7.3, no changes needed.
+  * Update debian/compat.
+  * Change Depends from debhelper 5 to debhelper >=6.
+  * Minor changes to debian/rules.
+  * Fix debian/watch (Closes: #453568).
+  * Add Homepage field to debian/control.
+  * Add new debian/copyright format.
+  * Use new menu format.
 
  -- Enrique Monge <emonge@debian.org.sv>  Tue, 22 Jan 2008 11:19:25 -0600
 
 wmifinfo (0.09-3) unstable; urgency=low
 
-  * New mainttainer (Closes: #427135)
-  * Bumped to 3.7.2 standard version
-    debian/compat added
-    changed Depends from debhelper 4 to debhelper >=5
-    minor changes to debian/rules
-  * debian/watch added
-  * changelog modified to comply with utf-8
+  * New maintainer (Closes: #427135).
+  * Bump to Standards-Version 3.7.2.
+  * Add debian/compat.
+  * Changed Depend from debhelper 4 to debhelper >=5.
+  * Minor changes to debian/rules.
+  * Add debian/watch.
+  * Modify changelog comply with utf-8.
 
  -- Enrique Monge <emonge@debian.org.sv>  Sat, 14 Jul 2007 18:32:59 -0600
 
 wmifinfo (0.09-2) unstable; urgency=low
 
-  * Orphan package, set maintainer to Debian QA Group
+  * Orphan package, set maintainer to Debian QA Group.
 
  -- Gordon Fraser <gordon@debian.org>  Sat, 02 Jun 2007 06:17:21 +0200
 
 wmifinfo (0.09-1) unstable; urgency=low
 
-  * New upstream version (Closes: #316266)
-  * Fix build dependencies (Closes: #346904)
+  * New upstream version (Closes: #316266).
+  * Fix build dependencies (Closes: #346904).
 
  -- Gordon Fraser <gordon@debian.org>  Sun, 15 Jan 2006 14:04:49 +0100
 
 wmifinfo (0.08-1) unstable; urgency=low
 
-  * New upstream version (Closes: #253174)
+  * New upstream version (Closes: #253174).
 
  -- Gordon Fraser <gordon@debian.org>  Thu, 29 Jul 2004 08:50:31 +0200
 
 wmifinfo (0.06-2) unstable; urgency=low
 
-  * New maintainer (Closes: #210793)
-  * Bump standards-version to 3.6.1.0
-  * Update DEB_BUILD_OPTIONS handling
-  * Minor update to description
-  * Remove dh_make boilerplate from debian/copyright 
-  * Add menu entry
+  * New maintainer (Closes: #210793).
+  * Bump Standards-Version to 3.6.1.0.
+  * Update DEB_BUILD_OPTIONS handling.
+  * Minor update to description.
+  * Remove dh_make boilerplate from debian/copyright.
+  * Add menu entry.
 
  -- Gordon Fraser <gordon@debian.org>  Sun, 21 Sep 2003 12:57:38 +0200
 
 wmifinfo (0.06-1) unstable; urgency=low
 
-  * New upstream release
+  * New upstream release.
 
  -- Søren Boll Overgaard <boll@debian.org>  Wed, 19 Jun 2002 12:27:30 +0200
 
 wmifinfo (0.05-2) unstable; urgency=low
 
-  * Uppercase description (closes: Bug#150377).
+  * Uppercase description (Closes: Bug#150377).
 
  -- Søren Boll Overgaard <boll@debian.org>  Wed, 19 Jun 2002 00:16:09 +0200
 
 wmifinfo (0.05-1) unstable; urgency=low
 
-  * Initial Release (closes: Bug#148406).
-  * Changed Makefile to install in $(DESTDIR)
+  * Initial Release (Closes: #148406).
+  * Changed Makefile to install in $(DESTDIR).
 
  -- Søren Boll Overgaard <boll@debian.org>  Fri,  7 Jun 2002 16:23:13 +0200
-
+  
