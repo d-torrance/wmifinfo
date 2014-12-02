@@ -1,7 +1,18 @@
-Author: Enrique Monge
-Description: Add CFLAGS, use rights PATHs and INSTALL instead of 'cp' 
---- wmifinfo-0.09.orig/Makefile	2005-03-14 01:28:31.000000000 -0600
-+++ wmifinfo-0.09/Makefile	2008-10-28 09:31:44.000000000 -0600
+Description: Various Makefile updates
+ This patch includes elements of the original makefile_patch.patch by Enrique
+ Monge and makefile_add_ldflags.patch by Emanuele Rocca.
+ .
+ Rename COPTS and LDOTPS to the more standard CFLAGS and LIBS.  Also use
+ CPPFLAGS when compiling and LDFLAGS when linking.
+ .
+ Use INSTALL instead of cp.  Also honor DESTDIR.
+Author: Doug Torrance <dtorrance@monmouthcollege.edu>
+Author: Enrique Monge <emonge@debian.org.sv>
+Author: Emanuele Rocca <ema@debian.org>
+Last-Update: 2014-12-01
+
+--- a/Makefile
++++ b/Makefile
 @@ -2,7 +2,7 @@
  # Set this to 'y' if you want support for reading the link quality
  # of nowiresneeded 1148 PCMCIA or Swallow cards
@@ -11,35 +22,50 @@ Description: Add CFLAGS, use rights PATHs and INSTALL instead of 'cp'
  
  
  ##################################################################
-@@ -13,9 +13,11 @@ VERSION=0.09
+@@ -13,34 +13,36 @@
  
  CC = gcc
  LD = gcc
 -COPTS = -Wall -O2 -D'VERSION="$(VERSION)"' -D'NAME="$(NAME)"'
-+COPTS = -D'VERSION="$(VERSION)"' -D'NAME="$(NAME)"'
- LDOPTS = -lX11 -L/usr/X11R6/lib -lXpm -lXext
+-LDOPTS = -lX11 -L/usr/X11R6/lib -lXpm -lXext
 -BINDIR = /usr/local/bin
-+BINDIR = $(DESTDIR)/usr/bin/
++CFLAGS = -Wall -O2 -D'VERSION="$(VERSION)"' -D'NAME="$(NAME)"'
++LIBS = -lX11 -lXpm -lXext
++PREFIX = /usr/local
++BINDIR = $(PREFIX)/bin
 +INSTALL=/usr/bin/install
 +INSTALL_PROGRAM = $(INSTALL) -p    -o root -g root  -m  755
  
  BIN =	wmifinfo
- FILES = wmifinfo.o xutils.o 
-@@ -28,7 +30,7 @@ endif
+-FILES = wmifinfo.o xutils.o 
++FILES = wmifinfo.o xutils.o
+ 
+ ifeq ("$(ENABLE_NWN_SUPPORT)", "y")
+ FILES += nwn.o
+-COPTS += -DENABLE_NWN_SUPPORT
++CFLAGS += -DENABLE_NWN_SUPPORT
+ endif
+ 
  all:	$(BIN)
  
- .c.o: 	
+-.c.o: 	
 -	$(CC) $(COPTS) -c $< 
-+	$(CC) $(COPTS) $(CFLAGS) -c $< 
++.c.o:
++	$(CC) $(CPPFLAGS) $(CFLAGS) -c $<
  
  $(BIN):	$(FILES)
- 	$(LD) -o $@ $(FILES) $(LDOPTS)
-@@ -37,7 +39,7 @@ clean:
+-	$(LD) -o $@ $(FILES) $(LDOPTS)
++	$(LD) $(LDFLAGS) -o $@ $(FILES) $(LIBS)
+ 
+ clean:
  	rm -f *.o $(BIN) core ./.#* *.orig *.rej
  
  install:
 -	cp $(BIN) $(BINDIR)
-+	$(INSTALL_PROGRAM) $(BIN) $(BINDIR)
++	$(INSTALL_PROGRAM) $(BIN) $(DESTDIR)$(BINDIR)
  
  dist:	clean
  	rm -rf /tmp/wmifinfo-$(VERSION)
+ 	cd .. && cp -a wmifinfo /tmp/wmifinfo-$(VERSION)
+ 	cd /tmp && tar --exclude CVS -zcvf wmifinfo-$(VERSION).tgz wmifinfo-$(VERSION)/
+-	

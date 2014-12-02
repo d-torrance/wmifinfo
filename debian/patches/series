@@ -1,3 +1,2 @@
 wmifinfo-timeval_fix.patch
 makefile_patch.patch
-makefile_add_ldflags.patch
