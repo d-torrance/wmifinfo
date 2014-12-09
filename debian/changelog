@@ -1,16 +1,21 @@
-wmifinfo (0.09-8) UNRELEASED; urgency=medium
+wmifinfo (0.10-1) UNRELEASED; urgency=medium
 
+  * New upstream release.
   * debian/control
     - Bump Standards-Version to 3.9.6, no changes required.
+    - Update Homepage.
+  * debian/copyright
+    - Update Upstream-Contact and Source.
   * debian/patches
-    - (makefile_add_ldflags.patch, makefile_patch.patch) Merge into one patch
-      and revise.
+    - Remove directory; patches applied upstream.
   * debian/README.source
     - Remove unnecessary file.
   * debian/rules
     - Add get-orig-source target.
+  * debian/watch
+    - Update with new location.
 
- -- Doug Torrance <dtorrance@monmouthcollege.edu>  Tue, 09 Dec 2014 02:03:51 -0600
+ -- Doug Torrance <dtorrance@monmouthcollege.edu>  Tue, 09 Dec 2014 13:37:02 -0600
 
 wmifinfo (0.09-7) unstable; urgency=low
 
