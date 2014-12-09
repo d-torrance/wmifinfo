@@ -1,7 +1,7 @@
 Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Upstream-Name: wmifinfo
-Upstream-Contact: Ico Doornekamp <wmifinfo@zevv.nl>
-Source: http://zevv.nl/play/code/wmifinfo/
+Upstream-Contact: Window Maker Developers Team <wmaker-dev@lists.windowmaker.org>
+Source: http://windowmaker.org/dockapps/?name=wmifinfo
 
 Files: *
 Copyright: 2004 Ico Doornekamp <wmifinfo@zevv.nl>
