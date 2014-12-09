@@ -1,2 +1,2 @@
 version=3
-http://www.zevv.nl/play/code/wmifinfo/wmifinfo-(.*)\.tgz
+http://windowmaker.org/dockapps/?name=wmifinfo \?download=wmifinfo-(.+).tar.gz
