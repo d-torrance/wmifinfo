@@ -6,4 +6,8 @@ override_dh_auto_build:
 	dh_auto_build -- CFLAGS+="$(CPPFLAGS)"
 
 get-orig-source:
-	uscan --verbose --force-download --rename
+	uscan --verbose --force-download --no-symlink
+	@if test -e ../wmifinfo-*.download ; then \
+		rename -f -v "s/wmifinfo-(.+)\.download/wmifinfo_\1\.orig\.tar\.gz/" \
+			../wmifinfo-*.download; \
+	fi
