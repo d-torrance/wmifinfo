@@ -31,7 +31,7 @@
 	  handling were fixed
 
 0.06	Added openBSD support
-	
+
 	- Peter Stromberg <wilfried at openbsd dot org> supplied a patch for
 	  OpenBSD support. I have not tried this myself since I don't have
 	  access to this OS. I will probably split the code into several
@@ -54,4 +54,12 @@
 
 	- the '-i' flag (initial interface) was broken. Thanks to Rod van
 	  Meter.
-	 
+
+0.10	Bugfix
+
+	- Add valid timeval. Patch by Julien BLACHE.
+	- Update Makefile.
+	- Fix compiler warnings.
+	- Add manpage from Debian package.
+	- Now maintained by the Window Maker Developers Team
+	  <wmaker-dev@lists.windowmaker.org>.
