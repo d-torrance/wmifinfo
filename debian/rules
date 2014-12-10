@@ -5,6 +5,9 @@
 override_dh_auto_build:
 	dh_auto_build -- CFLAGS+="$(CPPFLAGS)"
 
+override_dh_auto_install:
+	dh_auto_install -- PREFIX=/usr
+
 get-orig-source:
 	uscan --verbose --force-download --no-symlink
 	@if test -e ../wmifinfo-*.download ; then \
