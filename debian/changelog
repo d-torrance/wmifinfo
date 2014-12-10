@@ -16,11 +16,14 @@ wmifinfo (0.10-1) unstable; urgency=medium
     - Update override_dh_auto_build target.  In particular, we no
       longer need to pass CPPFLAGS via CFLAGS, as new upstream Makefile
       now respects CPPFLAGS. Also, we set ENABLE_NWN_SUPPORT here instead
-      of patching the Makefile, as had been previously done.
+      of patching the Makefile, as had been previously done, and use
+      CFLAGS from dpkg-buildflags.
   * debian/watch
     - Update with new location.
+  * debian/wmifinfo.1
+    - Remove file; included upstream.
 
- -- Doug Torrance <dtorrance@monmouthcollege.edu>  Tue, 09 Dec 2014 22:36:12 -0600
+ -- Doug Torrance <dtorrance@monmouthcollege.edu>  Wed, 10 Dec 2014 03:04:12 -0600
 
 wmifinfo (0.09-7) unstable; urgency=low
 
