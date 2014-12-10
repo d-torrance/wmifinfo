@@ -1,4 +1,4 @@
-wmifinfo (0.10-1) UNRELEASED; urgency=medium
+wmifinfo (0.10-1) unstable; urgency=medium
 
   * New upstream release.
   * debian/control
@@ -6,16 +6,21 @@ wmifinfo (0.10-1) UNRELEASED; urgency=medium
     - Update Homepage.
   * debian/copyright
     - Update Upstream-Contact and Source.
+  * debian/(dirs|manpages|README.source)
+    - Remove unnecessary files.
   * debian/patches
     - Remove directory; patches applied upstream.
-  * debian/README.source
-    - Remove unnecessary file.
   * debian/rules
     - Add get-orig-source target.
+    - Add override_dh_auto_install target to set PREFIX.
+    - Update override_dh_auto_build target.  In particular, we no
+      longer need to pass CPPFLAGS via CFLAGS, as new upstream Makefile
+      now respects CPPFLAGS. Also, we set ENABLE_NWN_SUPPORT here instead
+      of patching the Makefile, as had been previously done.
   * debian/watch
     - Update with new location.
 
- -- Doug Torrance <dtorrance@monmouthcollege.edu>  Tue, 09 Dec 2014 13:37:02 -0600
+ -- Doug Torrance <dtorrance@monmouthcollege.edu>  Tue, 09 Dec 2014 22:36:12 -0600
 
 wmifinfo (0.09-7) unstable; urgency=low
 
